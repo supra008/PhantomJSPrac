@@ -12,11 +12,11 @@ public class PhntmDriverSetup {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
-		System.setProperty("phantomjs.binary.path", "D:/Practice/SeleniumJars/phantomjs-2.1.1-windows/bin/phantomjs.exe");
-		 /*DesiredCapabilities caps = new DesiredCapabilities();
+		//System.setProperty("phantomjs.binary.path", "D:/Practice/SeleniumJars/phantomjs-2.1.1-windows/bin/phantomjs.exe");
+		 DesiredCapabilities caps = new DesiredCapabilities();
 		 caps.setJavascriptEnabled(true);
-		 caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"D:/Practice/SeleniumJars/phantomjs-2.1.1-windows/bin/phantomjs.exe" );*/
-		 WebDriver pjd = new PhantomJSDriver();
+		 caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"D:/Practice/SeleniumJars/phantomjs-2.1.1-windows/bin/phantomjs.exe" );
+		 WebDriver pjd = new PhantomJSDriver(caps);
 		
 		pjd.get("https://www.youtube.com");
 		Thread.sleep(5000);
@@ -30,10 +30,14 @@ public class PhntmDriverSetup {
 			System.out.println("ScreenShot Taken");
 		}
 		
+		
+		
 		else 
 		{
 			System.out.println("Redirection Successful to " + pjd.getCurrentUrl());
 		}
+		
+	
 
 	}
 
