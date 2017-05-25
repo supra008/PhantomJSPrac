@@ -37,5 +37,14 @@
 	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/Selenium-java-3.2.0/lib/xalan-2.7.2.jar"/>
 	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/Selenium-java-3.2.0/lib/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/Selenium-java-3.2.0/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/commons-email-1.4/commons-email-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/commons-email-1.4/commons-email-1.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/mail.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/dsn.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/gimap.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/imap.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/mailapi.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/pop3.jar"/>
+	<classpathentry kind="lib" path="D:/Practice/SeleniumJars/javamail-1.4.7/lib/smtp.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
