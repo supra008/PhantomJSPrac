@@ -9,7 +9,7 @@ import org.apache.commons.mail.MultiPartEmail;
 
 public class emailSent {
 	
-	int count = 0;
+	
 
 	public void EmailSent() throws EmailException {
 		
