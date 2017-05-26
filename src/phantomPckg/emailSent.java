@@ -1,24 +1,36 @@
 package phantomPckg;
 
+import java.io.File;
+
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
 
 public class emailSent {
+	
+	int count = 0;
+
 	public void EmailSent() throws EmailException {
 		
-		EmailAttachment attachment = new EmailAttachment();
-		attachment.setPath("D:/Practice/ScreenShots/sample.jpg");
-		attachment.setDescription(EmailAttachment.ATTACHMENT);
-		attachment.setDescription("Redirected page screenshot");
-		attachment.setName("Error page");
-		//System.out.println("ScreenShot Attached");
-		
-		
-		//Email email = new SimpleEmail();
-		
 		MultiPartEmail email = new MultiPartEmail (); 
+		
+		File f = new File("D:/Practice/ScreenShots");
+		
+		for(File file : f.listFiles())
+		{
+			if(file.isFile())
+			{
+				
+				EmailAttachment attachment = new EmailAttachment();
+				attachment.setPath("D:/Practice/ScreenShots/"+file.getName());
+				attachment.setDescription(EmailAttachment.ATTACHMENT);
+				attachment.setDescription("Redirected page screenshot");
+				attachment.getName();
+				email.attach(attachment);
+			}
+		}
+		
 		email.setHostName("smtp.gmail.com");
 		email.setSmtpPort(465);
 		email.setAuthenticator(new DefaultAuthenticator("ts19470815@gmail.com", "Abcd@12345"));
@@ -27,7 +39,7 @@ public class emailSent {
 		email.setSubject("TestMail");
 		email.setMsg("This is a test mail ... :-)");
 		email.addTo("mondal.supratim8@gmail.com");
-		email.attach(attachment);
+		
 		
 		email.send();
 		System.out.println("======Email Sent=======");
